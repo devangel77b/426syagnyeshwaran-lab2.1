@@ -1,0 +1,12 @@
+This is a review of the resubmitted ms "Verifying F=ma" by Ayyangar et al. I recommend minor revisions.
+
+F=ma should have a citation.
+
+"analog scale (Manalapan, NJ)" I think the authors mean a spring scale? It is typical to give the manufacturer and their location, e.g. "cart (PASCO Scientific, Roseville, CA)."
+
+"downward mass" - Mass has no direction? Do they mean hanging mass? ARe the different masses on the cart in addition to the 0.5 kg cart mass?
+
+The MS gives equations for mean and standard deviation; these are standard and do not need to be included here. It is sufficient to say that you are providing measurements as the mean +/- 1 s.d. ("Average" here should be avoided as there are many different averages that could be used).
+
+In Fig (3) there is experimental data and a best fit line but the methods do not explain what the equation is for the best fit line. Please explain.
+

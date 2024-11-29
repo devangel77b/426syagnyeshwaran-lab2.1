@@ -1,0 +1,34 @@
+This is a review of the MS "Proving F=ma" by Yagnyeshwaran et al. I recommend
+MAJOR REVISION NEEDED - RESUBMIT.
+
+Title: This paper is not a mathematical proof so the use of the word "proving"
+is inappropriate here. The authors hypothesize F=0 or F=ma or F=? and show that
+alternatives are not happening, so we provisionally accept F=ma until we
+find something better... and we woudl need something better if we were moving
+at v near speed of light so that relativity mattered, for example.
+
+Abstract: Same objection to word proof. It is not typical to include references or equations in an abstract.
+
+INtroduction: clean
+
+Methods and materials: mostly clean, however it would be nice to include sources
+for important gear so the work can be more easily replicated. The lab setup
+diagram has no scale given but is the most readable of these I have seen;
+authors should consider a diagram. Authors should be careful about the
+difference between mass and weight.
+
+Results:
+The authors say they are out to test either F=ma or a = m2/m1+m2 g
+but do not plot either. The graphs in the results are confusing and do not
+directly address the hypothesis the authors wish to test. See also similar
+graphs for Avalur et al; if the test was conducted in a way that mass is constant you might plot F = ma or a=m2/m1+m2 g. If total system mass is also changing
+you might plot a/g versus m2/m1+m2 as a nondimensionalized version of the data.
+
+Discussion:
+Yes or no does F=ma? Explain.
+
+Then discuss things like friction or timing errors or other sources of experimetnal error.
+
+One refernce is given but it is not cited anywhere in the text
+
+
