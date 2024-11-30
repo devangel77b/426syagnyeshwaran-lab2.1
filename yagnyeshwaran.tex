@@ -8,7 +8,7 @@
 \usepackage{siunitx}
 \sisetup{separate-uncertainty=true}
 \usepackage{cleveref}
-
+\usepackage{svg}
 
 
 
@@ -71,36 +71,37 @@ We tested these hypotheses by conducting numerous trials and recording the time 
 \section{Methods and materials}
 
 \subsection{Finding acceleration}
-In the experiment, we weighed each of the masses on a spring scale (Learning Resources; Vernon Hills, IL), with each of the additional masses on the \qty{0.5}{\kilo\gram} cart being \qty{1.2}{\kilo\gram}, and the smaller hanging mass tied to the string being \qty{0.2}{\kilo\gram}. We tied the smaller mass to a string and strung it across a pulley system, with the other end of the string tied to the cart. For each trial, the mass on the cart which was placed on top of a rail (PASCO Scientific; Roseville, CA) was increased and the time it took for the cart to travel \qty{0.7}{\meter} was recorded.
+In the experiment, we weighed each of the masses on a spring scale (Learning Resources; Vernon Hills, IL), with each of the additional masses on the $m_c=\qty{0.5}{\kilo\gram}$ cart being \qty{1.2}{\kilo\gram}, and the smaller hanging mass tied to the string being $m_2=\qty{0.2}{\kilo\gram}$. We tied the smaller mass to a string and strung it across a pulley system, with the other end of the string tied to the cart. For each trial, the mass on the cart which was placed on top of a rail (PASCO Scientific; Roseville, CA) was increased and the time it took for the cart to travel \qty{0.7}{\meter} was recorded. All trials started from rest.
 \begin{figure} %[H]
 \centering
 \includegraphics[width=0.7\linewidth]{Lab Setup Freebody diagram (3).png}
-\caption{Freebody Diagram of System}
-\label{fig:enter-label}
+\caption{\label{fig:enter-label} Free body diagram of the system}
 \end{figure}
 
 
-We used a mass pulley system, with a hanging mass of \qty{0.2}{\kilo\gram}, with different masses on the cart (in addition to the cart's mass), starting from: \qtylist{1.2;2.4;3.6}{\kilo\gram}. We measured three different times for each trial, observing how fast it took the cart to travel a distance of \qty{0.7}{\meter} so we could calculate the system's acceleration with different masses. For each trial, we used an iPhone 14 (Apple; Cupertino, CA) to take videos.
+We used a mass pulley system, with a hanging mass of \qty{0.2}{\kilo\gram}, with different masses on the cart (in addition to the cart's mass), starting from: \qtylist{1.2;2.4;3.6}{\kilo\gram}. We measured three different times for each trial, observing how fast it took the cart to travel a distance of \qty{0.7}{\meter} so we could calculate the system's acceleration with different masses $m_1$ as the independent variable. For each trial, we used an iPhone 14 (Apple; Cupertino, CA) to take videos to obtain timing.
 \begin{figure} %[H]
 \centering
 \includegraphics[width=0.4\textwidth]{Fixed_lab_pix3.png}
-\caption{Lab Setup}
-\label{fig:lab_setup}
+\caption{\label{fig:lab_setup} Experimental setup showing the cart ($m_c=\qty{0.5}{\kilo\gram}$) system with additional mass $m_1$, string, pulley, and hanging mass $m_2=\qty{0.2}{\kilo\gram}$ pulling the cart via the string. Pull distance was \qty{0.7}{\meter}.}
 \end{figure} 
 
+To calculate the measured acceleration of each individual trial for the respective masses, we assumed uniform acceleration and re-arranged the kinematic equation for position, solving for the acceleration $a$ given the time $t$ to move a distance $d$ \cite{tipler}:
 \begin{equation} 
-a = \frac{2d}{t^2}
+a_{meas} = \frac{2d}{t^2}.
 \label{eq:4} 
 \end{equation}
-This equation was used to calculate the accelerations of each individual trial for the respective masses. \cite{tipler}
+%This equation was used to calculate the accelerations of each individual trial for the respective masses. \cite{tipler}
 
+We compared the measured acceleration to the acceleration predicted using the masses of the system and the free body diagram given in \cref{fig:enter-label}, a half-Atwood machine configuration with solution commonly available in textbooks \cite{tipler}:
 \begin{equation} 
-a = \dfrac{m_2}{m_1 + m_2} g
+a = \dfrac{m_2}{m_1 + m_2 + m_c} g
 \label{eq:5}
 \end{equation}
-This equation was used to calculate the predicted acceleration using the masses of the system. \cite{tipler} 
+where the denominator indicates the total system mass is given by $m_1+m_2+m_c$ and $g=\qty{9.81}{\meter\per\second\squared}$ is the acceleration of gravity. 
+%This equation was used to calculate the predicted acceleration using the masses of the system. \cite{tipler} 
 
-The standard equations were used to find the mean and standard deviation for the times and accelerations in each trial.
+%The standard equations were used to find the mean and standard deviation for the times and accelerations in each trial.
 
 
 
@@ -110,80 +111,85 @@ The standard equations were used to find the mean and standard deviation for the
 
 
 \section{Results}
-\begin{table} %[H]
-\centering
-%\begin{tabular}{ | m{1.2cm} | m{1.1cm}| m{1.1cm} | m{1.1cm} | m{1cm} |} 
-\begin{tabular}{ccccc}
-%  \hline
-  Mass Added to Cart & Time 1 (s) & Time 2 (s) & Time 3 (s) & Mean + SD \\ 
-%  \hline
-  1.2 kg& 0.94 & 1.08 & 1.08 & 1.03 $\pm$ 0.081\\ 
-%  \hline
-  2.4 kg& 1.43 & 1.36 & 1.51 & 1.43 $\pm$ 0.081 \\ 
-%  \hline
-  3.6 kg& 1.64 & 1.57 & 1.63 & 1.61 $\pm$ 0.042 \\ 
-%  \hline
-\end{tabular}
-\caption{Measured Times for Each Trial} 
-\label{Times of Trials} 
-\end{table}
+We measured the time taken for a cart to travel a set distance of \qty{0.7}{\meter}. For each mass $m_1$, three trials were conducted. \Cref{tab:newtable1} gives the measured time and resulting acceleration, calculated using \cref{eq:5}, listed as mean $\pm$ one standard deviation, for $m_1=\qtylist{1.2;2.4;3.6}{\kilo\gram}$. For these measurements, $m_2=\qty{0.2}{\kilo\gram}$ and the empty cart $m_c=\qty{0.5}{\kilo\gram}$. For each value of $m_1$ there were $n=3$ replicates. 
+%The data presented in Table (3) represents the expected accelerations which were calculated through  \cref{eq:5} and the expected forces which were calculated using \cref{eq:1}. Furthermore,  Table (2) provides the actual accelerations of the system for each trial which were calculated using \cref{eq:5} as well as the mean calculated accelerations and their standard deviations.
+\input{table1.tex}
 
-\begin{table} %[H] 
-\centering
-%\begin{tabular}{ | m{1.2cm} | m{1.2cm}| m{1.2cm} | m{1.2cm} | m{1cm} |} 
-\begin{tabular}{ccccc}
-%  \hline
-  Mass Added to Cart & a(1) in $m/s^2$ & a(2) in $m/s^2$ & a(3) in $m/s^2$ & Mean + SD  \\ 
-%  \hline
-  1.2 kg& 1.584 & 1.200  & 1.200 & 1.33 $\pm$ 0.181\\ 
-%  \hline
-  2.4 kg& 0.746 & 0.657 & 0.614 & 0.67 $\pm$ 0.055 \\ 
-%  \hline
-  3.6 kg& 0.521 & 0.568 & 0.527 & 0.54 $\pm$ 0.021 \\ 
-%  \hline
-\end{tabular}
-\caption{Actual Accelerations ($a$) for Each Trial}
-\label{Accelerations for Each Trial} 
-\end{table}
+%\begin{table} %[H]
+%\centering
+%%\begin{tabular}{ | m{1.2cm} | m{1.1cm}| m{1.1cm} | m{1.1cm} | m{1cm} |} 
+%\begin{tabular}{ccccc}
+%%  \hline
+%  Mass Added to Cart & Time 1 (s) & Time 2 (s) & Time 3 (s) & Mean + SD \\ 
+%%  \hline
+%  1.2 kg& 0.94 & 1.08 & 1.08 & 1.03 $\pm$ 0.081\\ 
+%%  \hline
+%  2.4 kg& 1.43 & 1.36 & 1.51 & 1.43 $\pm$ 0.081 \\ 
+%%  \hline
+%  3.6 kg& 1.64 & 1.57 & 1.63 & 1.61 $\pm$ 0.042 \\ 
+%%  \hline
+%\end{tabular}
+%\caption{Measured Times for Each Trial} 
+%\label{Times of Trials} 
+%\end{table}
+%
+%\begin{table} %[H] 
+%\centering
+%%\begin{tabular}{ | m{1.2cm} | m{1.2cm}| m{1.2cm} | m{1.2cm} | m{1cm} |} 
+%\begin{tabular}{ccccc}
+%%  \hline
+%  Mass Added to Cart & a(1) in $m/s^2$ & a(2) in $m/s^2$ & a(3) in $m/s^2$ & Mean + SD  \\ 
+%%  \hline
+%  1.2 kg& 1.584 & 1.200  & 1.200 & 1.33 $\pm$ 0.181\\ 
+%%  \hline
+%  2.4 kg& 0.746 & 0.657 & 0.614 & 0.67 $\pm$ 0.055 \\ 
+%%  \hline
+%  3.6 kg& 0.521 & 0.568 & 0.527 & 0.54 $\pm$ 0.021 \\ 
+%%  \hline
+%\end{tabular}
+%\caption{Actual Accelerations ($a$) for Each Trial}
+%\label{Accelerations for Each Trial} 
+%\end{table}
+%
+%\begin{table} %[H] 
+%\centering
+%%\begin{tabular}{ | m{1.2cm} | m{2.1cm}| m{1.2cm}|} 
+%\begin{tabular}{cccc}
+%%  \hline
+%  Trials & Acceleration $m/s^2$ & Force $N$ \\ 
+%%  \hline
+%  Trial 1 & 1.033 & 1.756\\ 
+%%  \hline
+%  Trial 2 & 0.633 & 1.836 \\ 
+%%  \hline
+%  Trial 3 & 0.426 & 1.870 \\ 
+%%  \hline
+%\end{tabular}
+%\caption{ Expected Accelerations (\unit{\meter\per\second\squared}) and Forces (\unit{\newton}) for Each Trial}
+%\label{Accelerations for Each Trial} 
+%\end{table}
 
-\begin{table} %[H] 
-\centering
-%\begin{tabular}{ | m{1.2cm} | m{2.1cm}| m{1.2cm}|} 
-\begin{tabular}{cccc}
-%  \hline
-  Trials & Acceleration $m/s^2$ & Force $N$ \\ 
-%  \hline
-  Trial 1 & 1.033 & 1.756\\ 
-%  \hline
-  Trial 2 & 0.633 & 1.836 \\ 
-%  \hline
-  Trial 3 & 0.426 & 1.870 \\ 
-%  \hline
-\end{tabular}
-\caption{ Expected Accelerations (\unit{\meter\per\second\squared}) and Forces (\unit{\newton}) for Each Trial}
-\label{Accelerations for Each Trial} 
-\end{table}
+\Cref{fig:graph of acceleration} illustrates the behavior of the expected and calculated accelerations in terms of mass. Measured values of acceleration, calculated from $t$ using \cref{eq:5} and tabulated in \ref{tab:newtable1}, are plotted in \cref{fig:graph of acceleration} as black dots. Acceleration predicted using \cref{eq:5} is plotted as a blue line. The actual acceleration values follow the behavior of the predicted values closely, verifying Newton's second law. As the mass added to the cart increased, we observed a decrease in acceleration, while the force ($T$ in \cref{fig:enter-label}) remained approximately the same. Specifically, the calculated accelerations were \qtylist{1.33;0.67;0.54}{\meter\per\second\squared}, and the forces were \qtylist{1.756;1.836;1.870}{\newton} for masses of \qtylist{1.7;2.9;4.1}{\kilo\gram} (accounting for the cart and the added masses, i.e. $m_1+m_c$) respectively. 
+%The hanging mass of \qty{0.2}{\kilo\gram} was kept constant throughout all the trials; i.e. external gravitational force was held constant through our experiment. 
 
-\begin{figure} %[H]
-\centering
-\includegraphics[width=0.8\linewidth]{desmos-graph (2).png}
-\caption{Mass (\unit{\kilo\gram}) vs. Acceleration (\unit{\meter\per\second\squared})}
-\label{fig:graph of acceleration}
+\begin{figure}[ht] %[H]
+\begin{center}
+%\includegraphics[width=0.8\linewidth]{desmos-graph (2).png}
+\includesvg[width=\columnwidth]{fig3.svg}
+\end{center}
+\caption{\label{fig:graph of acceleration} Mass $m_1$ (\unit{\kilo\gram}) versus acceleration $a$ (\unit{\meter\per\second\squared}). Dots indicate measured values of acceleration obtained from the measured time to travel from rest \qty{0.7}{\meter} using \cref{eq:4}. $n=3$ replicates for each value of $m_1$, as tabulated in \cref{tab:newtable1}. Blue line indicates acceleration predicted by \cref{eq:5} for $m_1$, $m_2=\qty{0.200}{\kilo\gram}$, and empty cart $m_c=\qty{0.500}{\kilo\gram}$.}
 \end{figure}
 
-
-We measured the time taken for a cart to travel a set distance of \qty{0.7}{\meter}. For each mass, three trials were conducted. For each trial, the mean time and standard deviations of time were calculated using the standard equations. This information is presented in Table (1). The data presented in Table (3) represents the expected accelerations which were calculated through  \cref{eq:5} and the expected forces which were calculated using \cref{eq:1}. Furthermore,  Table (2) provides the actual accelerations of the system for each trial which were calculated using \cref{eq:5} as well as the mean calculated accelerations and their standard deviations.
-
-\Cref{fig:graph of acceleration} illustrates the behavior of the expected and calculated accelerations in terms of mass. The actual values are plotted on the graph in black and the predicted acceleration that was graphed using \cref{eq:4} is graphed in purple. The actual acceleration values follow the behavior of the predicted values very closely, verifying Newton's Second Law. As the mass added to the cart increased, we observed a decrease in acceleration, while the force remained approximately the same. Specifically, the calculated accelerations were \qtylist{1.33;0.67;0.54}{\meter\per\second\squared}, and the forces were \qtylist{1.756;1.836;1.870}{\newton} for masses of \qtylist{1.7;2.9;4.1}{\kilo\gram} (accounting for the cart and the added masses) respectively. The hanging mass of \qty{0.2}{\kilo\gram} was kept constant throughout all the trials. 
-
-For each of the trials, the standard deviations of the accelerations were minimal (Table 2), indicating fairly accurate results. The predicted values align with the calculated values, corroborating that mass and acceleration are inversely proportional to each other when force is kept the same. Since this relationship is verified, if mass remains the same,  acceleration and force will be directly proportional. 
+For each of the trials, the standard deviations of the accelerations were minimal (\cref{tab:newtable1}), indicating precise results. 
 
 
 
 
 
 \section{Discussion}
-The results do support Newton's Second Law, showing the acceleration was inversely proportional to the total mass of the cart. Ultimately, force calculations should be consistent as the mass increases, but we observed a slight discrepancy from our results compared to the expected values, likely due to human error. As a result of minor errors during timing, the calculated acceleration values were slightly higher than the predicted acceleration values. This is visible in the graph, where most of the acceleration values from the experiment are plotted slightly higher than the curve of the predicted acceleration. Though the plane was near frictionless, the little friction should have decreased the acceleration in comparison to the expected values; however, our human error was significant and offset the difference caused by friction. 
+Our results support Newton's second law (\cref{eq:1}), showing the acceleration was inversely proportional to the total mass of the cart. As shown in \cref{fig:graph of acceleration}, measured acceleration values align with acceleration predicted from Newton's second law (\cref{eq:1}) based on analysis of the free-body diagram of \cref{fig:enter-label}, corroborating that mass and acceleration are inversely proportional to each other when force is kept the same. Our test was conducted with varying total system mass and constant force; however, if mass remains the same, acceleration and force will be directly proportional. 
+
+Ultimately, force calculations should be consistent as the mass increases, but we observed a slight discrepancy from our results compared to the expected values, likely due to human error in timing with stopwatches. As a result of minor errors during timing, the calculated acceleration values were slightly higher than the predicted acceleration values. This is visible in \cref{fig:graph of acceleration}, where most of the measured acceleration values from the experiment are plotted slightly higher than the curve of the predicted acceleration. Though the plane was near frictionless, the little friction should have decreased the acceleration in comparison to the expected values; however, our human error was significant and offset the difference caused by friction. 
 
 
 
@@ -192,7 +198,9 @@ The results do support Newton's Second Law, showing the acceleration was inverse
 
 
 \section{Acknowledgements}
-We thank Antonella Ortega for her momentum writeup which served as a reference. Additionally, we acknowledge each of the members of our group and their contributions. Thank you to E. Chen, A. Guimaraes, A. Kabatsky, and S. Yagnyeshwaran for your hard work on the first draft of the lab report. Thank you to V. Ayyangar, A. Cetrulo, A. Guimaraes, and A. Kabatsky for their data collection. Everyone contributed to the revisions made to this writeup. Lastly, we would like to thank D. Avalur, C. Butash, C. Canada, D. Evangelista, and K. Tomazic for providing suggestions and critiques on our work. 
+We thank A Ortega for her momentum writeup which served as a reference. Additionally, we thank several anonymous reviewers whose comments improved our manuscript.
+
+EC, AG, AK, and SY developed  the first draft of the manuscript. VA, AC, AG, and AK collected the data. Everyone contributed to revisions.
 
 
 
