@@ -14,8 +14,8 @@ apredicted.ms2 <- function(m2,m1,mc){
 fig <- ggplot(data)+geom_point(aes(x=m1.kg,y=ameas.ms2))+
     ylim(0,2)+xlim(0,4)+
     geom_function(fun=apredicted.ms2,args=list(m2=0.23,mc=0.5),color='blue')+
-    xlab('$m_1$, \\unit{\\kilo\\gram}')+
-    ylab('$a$, \\unit{\\meter\\per\\second\\squared}')+
+    xlab('$m_1$ (\\unit{\\kilo\\gram})')+
+    ylab('$a$ (\\unit{\\meter\\per\\second\\squared})')+
     theme_bw(base_size=8)
 
 library(svglite)
