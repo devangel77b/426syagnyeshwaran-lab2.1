@@ -1,4 +1,4 @@
-\documentclass[reprint,amsmath,amssymb,aps]{revtex4-2}
+\documentclass[reprint,amsmath,amssymb,aps,twoside]{revtex4-2}
 
 
 \usepackage{graphicx}
@@ -13,12 +13,29 @@
 \crefname{figure}{Fig.}{Figs.}
 \crefname{table}{Table}{Tables}
 \usepackage{svg}
+% set PDF metadata
+\hypersetup{%
+pdftitle={Verifying F=ma},
+pdfauthor={Sagarika Yagnyeshwaran, Emily Chen, Andrew Kabatsky, Aleksandra Guimaraes, Vijita Ayyangar, and Aryanna Cetrulo},
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,RO]{J S\&E \textbf{1}, 31--33 (2024)}
+\fancyhead[LO]{Yagnyeshwaran et al.}
+\fancyhead[LE]{Verifying $\sum\vec{F}=m\vec{a}$}
+\fancyfoot[C]{\thepage}
+\fancypagestyle{mytitlepage}{
+\fancyhf{}
+\fancyhead[C]{Journal of Science \& Engineering \textbf{1}, 31--33 (2024)}
+\fancyfoot[C]{\thepage}
+}
 
 
 
 
 \begin{document}
-
+\setcounter{page}{31}
 \title{Verifying $\sum\vec{F} = m\vec{a}$}
 
 \author{Sagarika Yagnyeshwaran}
@@ -37,7 +54,7 @@ Newton’s second law is verified in this lab through the use of a cart and rail
 
 \keywords{keywords here}
 
-\maketitle
+\maketitle\thispagestyle{mytitlepage}
 
 
 
